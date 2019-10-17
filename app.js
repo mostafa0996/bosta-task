@@ -1,9 +1,16 @@
 const express = require('express');
 const app = express();
-const findServerModule = require('./findServer');
+const bodyParser = require('body-parser');
 
-app.get('/bosta/check-server', findServerModule.findServer);
+const findServerModule = require('./modules/findServer');
 
-app.listen(5000, () => {
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+app.post('/bosta/check-server', findServerModule.findServer);
+
+const server = app.listen(5000, () => {
 	console.log('Server is listening 5000');
 });
+
+module.exports = server;
