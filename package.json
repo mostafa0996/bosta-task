@@ -20,7 +20,9 @@
 	"homepage": "https://github.com/mostafa0996/bosta-task#readme",
 	"dependencies": {
 		"body-parser": "^1.19.0",
+		"cors": "^2.8.5",
 		"express": "^4.17.1",
+		"helmet": "^3.21.1",
 		"node-fetch": "^2.6.0",
 		"supertest": "^4.0.2"
 	},
