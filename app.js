@@ -2,15 +2,17 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 
-const findServerModule = require('./modules/findServer');
+const findServerRouter = require('./routes/checkServer');
 
+// configure request-parsing
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.post('/bosta/check-server', findServerModule.findServer);
+// Using our routes
+app.use('/bosta', findServerRouter);
 
 const server = app.listen(5000, () => {
 	console.log('Server is listening 5000');
 });
 
-module.exports = server;
+module.exports = server; // for testing

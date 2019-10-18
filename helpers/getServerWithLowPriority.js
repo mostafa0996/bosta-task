@@ -1,5 +1,7 @@
 /**
- * @description Check if there is online servers
+ * @description Get Server with lowest priority
+ * @param {array} onlineServers
+ * @param {array} minArr
  * @returns {Promise}
  */
 module.exports = (onlineServers, minArr) => {
