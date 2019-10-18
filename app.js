@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 
-const findServerRouter = require('./routes/checkServer');
+const findServerRouter = require('./modules/serverAvailability/routes/serverAvailability.route');
 
 // configure request-parsing
 app.use(bodyParser.urlencoded({ extended: false }));

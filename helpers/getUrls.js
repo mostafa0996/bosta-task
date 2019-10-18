@@ -2,7 +2,7 @@
 /**
  * @description Function to get all url in one array
  * @param {array} serverArray
- * @returns {array} arrau of urls
+ * @returns {array} array of urls
  */
 module.exports = serverArray => {
     const urls = [];

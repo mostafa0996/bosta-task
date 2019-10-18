@@ -1,9 +1,10 @@
-const fetchAsync = require('../helpers/fetchAsync');
-const getUrls = require('../helpers/getUrls');
-const checkServerAvailability = require('../helpers/checkServerAvailability')
+const fetchAsync = require('../../../helpers/fetchAsync');
+const getUrls = require('../../../helpers/getUrls');
+const checkServerAvailability = require('../../../helpers/checkServerAvailability')
 
 module.exports.findServer = async (req, res) => {
 	const { serverArray } = req.body;
+	
 	// get all urls in one arry
 	const urls = getUrls(serverArray);
 
